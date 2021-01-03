@@ -1,11 +1,12 @@
 <template>
   <div class="container">
     <v-card v-bind:color="cardColor" elevation="20" v-if="quiz">
-      <v-card-title>問題：「{{quiz.question}}」</v-card-title>
+      <v-card-title>問題{{quiz.id}}：「{{quiz.question}}」</v-card-title>
       <v-card-text v-for="(choice, index) in quiz.choices" :key="choice">
         <div>({{index+1}}).　{{choice}}</div>
       </v-card-text>
       </v-card>
+      <Footer/>
   </div>
 </template>
 
@@ -13,6 +14,7 @@
 import {Vue, Component} from 'vue-property-decorator';
 import quizzes from '@/assets/json/quiz.json'
 import {IQuiz} from 'interface/IQuiz'
+import Footer from 'components/Footer.vue';
 
 @Component
 export default class Question extends Vue {

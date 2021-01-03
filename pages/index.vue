@@ -1,16 +1,14 @@
 <template>
   <div class="container">
-    <div>
-           <Question />
-      </div>
-    </div>
+    <div class="subtitle">旗の台３丁目<br/>地域の底力事業</div>
+    <Footer/>
   </div>
+  
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import Question from '~/components/Question.vue'
-
+import Footer from 'components/Footer.vue';
 @Component
 export default class Index extends Vue {
 
