@@ -3,7 +3,7 @@
     キノコ-abcde-123-村瀬
 
     <div class="map">
-      <img src="/img/map.png" />
+      <img src="/kinoko-hatanodai3/img/map.png" />
     </div>
   </div>
 </template>
