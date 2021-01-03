@@ -1,6 +1,8 @@
 <template>
   <div class="footer">
-    <a href="https://mashandroom.org" target="_blank">producted by マッシュ＆ルーム</a>
+    <a href="https://mashandroom.org" target="_blank"
+      >producted by マッシュ＆ルーム</a
+    >
   </div>
 </template>
 

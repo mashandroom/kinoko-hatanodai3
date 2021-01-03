@@ -1,6 +1,6 @@
 export interface IQuiz {
-    id: number;
-    question: string;
-    choices: string[];
-    answer: string;
+  id: number
+  question: string
+  choices: string[]
+  answer: string
 }
