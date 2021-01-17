@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <v-card v-bind:color="cardColor" elevation="20" v-if="quiz">
-      <v-card-title>問題{{ quiz.id }}：{{ quiz.question }}</v-card-title>
+      <v-card-title>クイズ{{ quiz.id + 1 }}：{{ quiz.question }}</v-card-title>
       <div v-if="quiz.rubi">{{ quiz.rubi }}</div>
       <div v-if="quiz.choices">
         <v-card-text v-for="(choice, index) in quiz.choices" :key="choice">
