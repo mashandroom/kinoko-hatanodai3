@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer-container">
     <a href="https://mashandroom.org" target="_blank"
       >producted by マッシュ＆ルーム</a
     >
@@ -14,7 +14,7 @@ export default class Footer extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.footer {
+.footer-container {
   position: absolute;
   bottom: 0;
   background-color: aquamarine;

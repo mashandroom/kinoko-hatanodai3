@@ -5,6 +5,11 @@
 </template>
 
 <style>
+@font-face {
+  font-family: 'DraQue';
+  src: url('~assets/fonts/PixelMplus12-Regular.ttf');
+}
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
