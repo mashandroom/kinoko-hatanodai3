@@ -3,20 +3,21 @@
     <v-card v-bind:color="cardColor" elevation="20" v-if="quiz">
       <v-card-title>問題{{ quiz.id }}：{{ quiz.question }}</v-card-title>
       <div v-if="quiz.rubi">{{ quiz.rubi }}</div>
-      <v-card-text v-for="(choice, index) in quiz.choices" :key="choice">
-        <div>({{ index + 1 }}).　{{ choice }}</div>
-      </v-card-text>
-      <iframe
+      <div v-if="quiz.choices">
+        <v-card-text v-for="(choice, index) in quiz.choices" :key="choice">
+          <div>({{ index + 1 }}).　{{ choice }}</div>
+        </v-card-text>
+      </div>
+      <v-btn
+        style="margin-bottom: 10px; margin-top: 10px"
         v-if="quiz.mapLink"
-        :src="quiz.mapLink"
-        width="600"
-        height="450"
-        frameborder="0"
-        style="border: 0"
-        allowfullscreen=""
-        aria-hidden="false"
-        tabindex="0"
-      ></iframe>
+        rounded
+        color="primary"
+        dark
+        @click="goMap(quiz.mapLink)"
+      >
+        ちずをみる
+      </v-btn>
     </v-card>
     <Footer />
   </div>
@@ -47,6 +48,10 @@ export default class Question extends Vue {
   private getCardColor(): string {
     //return "#ff00ff";
     return ''
+  }
+
+  private goMap(url: string): void {
+    window.open(url, '_blank')
   }
 }
 </script>
