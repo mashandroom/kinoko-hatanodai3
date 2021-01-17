@@ -1,10 +1,22 @@
 <template>
   <div class="container">
     <v-card v-bind:color="cardColor" elevation="20" v-if="quiz">
-      <v-card-title>問題{{ quiz.id }}：「{{ quiz.question }}」</v-card-title>
+      <v-card-title>問題{{ quiz.id }}：{{ quiz.question }}</v-card-title>
+      <div v-if="quiz.rubi">{{ quiz.rubi }}</div>
       <v-card-text v-for="(choice, index) in quiz.choices" :key="choice">
         <div>({{ index + 1 }}).　{{ choice }}</div>
       </v-card-text>
+      <iframe
+        v-if="quiz.mapLink"
+        :src="quiz.mapLink"
+        width="600"
+        height="450"
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
     </v-card>
     <Footer />
   </div>
